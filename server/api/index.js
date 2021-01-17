@@ -10,11 +10,3 @@ router.use((req, res, next) => {
 })
 
 module.exports = router;
-
-
-
-
-//Send all data requests to:
-//http://www.omdbapi.com/?apikey=fcf9a313&
-//Poster API Requests:
-//http://img.omdbapi.com/?apikey=fcf9a313&

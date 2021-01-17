@@ -12,7 +12,6 @@ router.get('/', async (req, res, next) => {
 });
 
 router.post('/', async (req, res, next) => {
-  // send status res
   try {
     await Nomination.create(req.body);
     res.sendStatus(201);
@@ -21,8 +20,14 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.put('/:nomId', function (req, res, next) { /* etc */});
-
-router.delete('/:nomId', function (req, res, next) { /* etc */});
+router.delete('/:nomId',  async (req, res, next) => {
+  try {
+    const nomination = await Nomination.findByPk(req.params.nomId);
+    await nomination.destroy();
+    res.sendStatus(200);
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

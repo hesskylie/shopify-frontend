@@ -7,7 +7,7 @@ const Nomination = db.define('nomination', {
     allowNull: false
   },
   year: {
-    type: Sequelize.INTEGER(4),
+    type: Sequelize.INTEGER,
     allowNull: false
   }
 })
