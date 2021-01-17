@@ -1,8 +1,7 @@
 const router = require('express').Router();
 
 router.use('/nominations', require('./nominations'));
-// router.use('/galleries', require('./galleries'));
-// router.use('/photos', require('./photos'));
+
 
 router.use((req, res, next) => {
   const err = new Error('Not found.');
