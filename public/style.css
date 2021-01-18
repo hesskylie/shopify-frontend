@@ -12,7 +12,7 @@ body {
 .container {
   background-color: rgb(174, 192, 209);
   padding: 5px;
-  margin: 1em;
+  margin: 10px;
 }
 
 #search {
@@ -34,11 +34,14 @@ body {
 }
 
 .resultsLine {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
 }
 
 .results {
-  margin: 0 1em 0 0;
+  display: inline-block;
+  align-content: left;
+  margin: 10px;
 }

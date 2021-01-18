@@ -93,6 +93,8 @@ const Shoppies = props => {
         <label htmlFor="searchBar">Movie title</label>
         <input name="searchBar" onInput={(e) => handleChange(e.currentTarget.value)}></input>
       </div>
+
+
       {alreadyComplete ? <p>You have reached the maximum nominations.</p> : null}
       <div className="flexboxes">
         {firstRun ? null:
