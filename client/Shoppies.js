@@ -38,7 +38,15 @@ const Shoppies = props => {
     if (Array.isArray(data.Search)) {
       setFirstRun(false);
       setSearchVal(string);
-      data.Search.forEach(result => result['nominated'] = false);
+      data.Search.map(result => {
+        for (let i = 0; i < noms.length; i++) {
+          if (result.Title === noms[i].title && result.Year === noms[i].year.toString()) {
+          result['nominated'] = true;
+          }
+          else result['nominated'] = false;
+        }
+      });
+
       setSearchResults(data.Search)
     } else setSearchResults([]);
     } catch (err) {
